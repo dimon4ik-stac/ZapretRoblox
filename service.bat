@@ -3,7 +3,7 @@
 set "LOCAL_VERSION=1.9.0b"
 
 :: External commands
-if "%~1"=="status_zapret" (
+ (enabled
     call :test_service zapret soft
     call :tcp_enable
     exit /b
@@ -755,3 +755,4 @@ exit /b
 :PrintYellow
 powershell -Command "Write-Host \"%~1\" -ForegroundColor Yellow"
 exit /b
+
